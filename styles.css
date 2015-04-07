@@ -10,6 +10,7 @@ body {
     background-image: url(background.jpg);
     background-size: cover;
     background-position: bottom;
+    background-attachment: fixed;
     height: 100%;
     width: 100%;
     color: #ecf0f1;
@@ -51,6 +52,12 @@ a {
     border: solid 2px #ecf0f1;
     margin: 0 5px 0 5px;
     letter-spacing: 3px;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+.links:hover {
+    background-color: rgba(236,240,241, 0.5);
 }
 
 @media (max-width: 640px) {
