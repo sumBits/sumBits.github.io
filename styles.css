@@ -7,18 +7,22 @@
 html,
 body {
     font-family: 'Lato', sans-serif;
-    background-image: url(background.jpg);
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
     height: 100%;
     width: 100%;
     color: #ecf0f1;
 }
 
+p {
+    font-size: 20px;
+}
+
 .main {
-    height: 90%;
+    height: 100%;
     width: 100%;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 .outer {
@@ -31,14 +35,26 @@ body {
     vertical-align: middle;
 }
 
+.second {
+    color: black;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
 h1 {
     font-size: 50px;
 }
 
 .footer {
-    height: 10%;
+/*    position: relative;*/
+/*    height: 10%;*/
+    height: 40px;
     width: 100%;
     font-size: 25px;
+    margin-bottom: 0;
+    bottom: 0;
+    display: table-row;
 }
 
 a {
