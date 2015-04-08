@@ -10,6 +10,11 @@ body {
     height: 100%;
     width: 100%;
     color: #ecf0f1;
+    
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 p {
@@ -19,10 +24,6 @@ p {
 .main {
     height: 100%;
     width: 100%;
-    background-image: url(background.jpg);
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
 }
 
 .outer {
@@ -40,6 +41,7 @@ p {
     height: 100%;
     width: 100%;
     vertical-align: top;
+    background-color: rgba(236,240,241, 0.5);
 }
 
 h1 {
