@@ -41,7 +41,7 @@ p {
     height: 100%;
     width: 100%;
     vertical-align: top;
-    background-color: rgba(236,240,241, 0.5);
+    background-color: rgba(102,48,150, .1);
 }
 
 h1 {
@@ -75,7 +75,7 @@ a {
 }
 
 .links:hover {
-    background-color: rgba(236,240,241, 0.5);
+    background-color: rgba(102,48,150, 0.5);
 }
 
 @media (max-width: 640px) {
