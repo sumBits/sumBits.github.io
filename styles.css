@@ -38,10 +38,10 @@ p {
 
 .second {
     color: black;
-    height: 100%;
+    height: 50%;
     width: 100%;
     vertical-align: top;
-    background-color: rgba(102,48,150, .1);
+    background-color: rgba(255,255,255, 1.0);
 }
 
 #sumbitshead {
@@ -97,4 +97,14 @@ a {
     .footer {
         font-size: 30px;
     }
+}
+#img1 {
+    float: left;
+    height: 35%;
+    width; 35%;
+}
+#img2 {
+    float: right;
+    height: 20%;
+    width: 40.65%;
 }
