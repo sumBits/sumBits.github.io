@@ -44,8 +44,12 @@ p {
     background-color: rgba(102,48,150, .1);
 }
 
-h1 {
+#sumbitshead {
     font-size: 50px;
+}
+
+#abouthead {
+    font-size 50px 
 }
 
 .footer {
@@ -76,6 +80,7 @@ a {
 
 .links:hover {
     background-color: rgba(102,48,150, 0.5);
+    border: solid 2px #F00;
 }
 
 @media (max-width: 640px) {
