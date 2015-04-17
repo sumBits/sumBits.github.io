@@ -10,7 +10,6 @@ body {
     height: 100%;
     width: 100%;
     color: #ecf0f1;
-    
     background-image: url(background.jpg);
     background-size: cover;
     background-position: bottom;
@@ -19,6 +18,11 @@ body {
 
 p {
     font-size: 20px;
+    -webkit-animation-duration: 10s;
+}
+
+h1 {
+    -webkit-animation-duration: 10s;
 }
 
 .main {
@@ -41,7 +45,7 @@ p {
     height: 50%;
     width: 100%;
     vertical-align: top;
-    background-color: rgba(255,255,255, 1.0);
+    background-color: rgba(255, 255, 255, 1.0);
 }
 
 #second {
@@ -54,7 +58,7 @@ p {
     height: 50%;
     width: 100%;
     vertical-align: top;
-    background-color: rgba(255,255,255, 1.0);
+    background-color: rgba(255, 255, 255, 1.0);
 }
 
 #fourth {
@@ -80,12 +84,13 @@ p {
 }
 
 #abouthead {
-    font-size 50px 
+    font-size: 50px;
 }
 
 .footer {
-/*    position: relative;*/
-/*    height: 10%;*/
+    /*    position: relative;*/
+    /*    height: 10%;*/
+    
     height: 40px;
     width: 100%;
     font-size: 25px;
@@ -110,7 +115,7 @@ a {
 }
 
 .links:hover {
-    background-color: rgba(102,48,150, 0.5);
+    background-color: rgba(102, 48, 150, 0.5);
     border: solid 2px #F00;
 }
 
@@ -129,11 +134,13 @@ a {
         font-size: 30px;
     }
 }
+
 #img1 {
     float: left;
     height: 35%;
-    width; 35%;
+    width: 35%;
 }
+
 #img2 {
     float: right;
     height: 200px;
