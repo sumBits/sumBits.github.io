@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #phone-case {
+            position: relative;
+            z-index: 1;
+            width: 380px;
+            height: 810px;
+            background: url("http://ionicframework.com/img/phone-case.png") no-repeat right top;
+            margin-left: 20px;
+        }
+        
+        iframe {
+            position: absolute;
+            width: 320px !important;
+            height: 568px;
+            top: 104px;
+            left: 37px;
+        }
+    </style>
+</head>
+
+<body onresize="handleResize()">
+    <div id="phone-case">
+    <iframe id="map" src="/www/index.html" seamless>
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+
+<!--
+    <script>
+        function handleResize() {
+            var mapElement = document.getElementById("map");
+            mapElement.style.width = (mapElement.offsetHeight * 0.5625) + "px";
+        }
+    </script>
+-->
+
+</body>
+
+</html>

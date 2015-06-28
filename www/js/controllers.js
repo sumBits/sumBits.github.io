@@ -1,15 +1,102 @@
 angular.module('starter.controllers', [])
 
-.controller('UserThreadChatCtrl', function ($scope) {
+.controller('UserThreadChatCtrl', function ($scope, $stateParams, UserThreadsGetter, AuthTokenFactory, UserFactory) {
+    var username;
+    $scope.submitPost = function (post) {
+        if (AuthTokenFactory.getToken()) {
+            UserFactory.getUser().then(function success(response) {
+                UserThreadsGetter.postToThread($stateParams.uThreadId, post, username).then(function success(response) {
+                    $scope.getPosts();
+                });
+            });
+            $scope.post = null;
+        } else {
+            alert("You are not signed in. Posting to User Threads requires that you be signed in.")
+        }
+    }
 
+    $scope.getPosts = function () {
+        UserThreadsGetter.getPosts($stateParams.uThreadId, function (data) {
+            $scope.posts = data;
+            username = $scope.posts[0].author;
+            console.log("USN IS " + username);
+        });
+    }
 })
 
-.controller('UserThreadCtrl', function ($scope, $stateParams) {
-
+.controller('UserThreadCtrl', function ($scope, $timeout, $ionicPopup, UserThreadsGetter, UserFactory, AuthTokenFactory) {
+    $scope.getUserThreads = function () {
+        if (AuthTokenFactory.getToken()) {
+            UserFactory.getUser().then(function success(response) {
+                UserThreadsGetter.getUserThreads(response.data.user, function (data) {
+                    $scope.userThreads = data;
+                });
+            });
+        } else {
+            alert("You are not signed in. Viewing User Threads requires that you be signed in.")
+        }
+    }
+    $scope.userPost = function () {
+        var myPopup = $ionicPopup.show({
+            template: '<input type="text" ng-model="title.text">',
+            title: 'Enter title of your Thread!',
+            subTitle: 'Read the rules before creating a new Thread!',
+            scope: $scope,
+            buttons: [
+                {
+                    text: 'Cancel'
+                },
+                {
+                    text: '<b>Create!</b>',
+                    type: 'button-positive',
+                    onTap: function (e) {
+                        if (!$scope.title.text) {
+                            //don't allow the user to close unless he enters wifi password
+                            e.preventDefault();
+                        } else {
+                            return $scope.title.text;
+                        }
+                    }
+      }
+    ]
+        });
+        
+    var rn1 = Math.floor(Math.random() * (122 - 48 + 1)) + 48;
+    var rn2 = Math.floor(Math.random() * (122 - 48 + 1)) + 48;
+    var rn3 = Math.floor(Math.random() * (122 - 48 + 1)) + 48;
+    var rn4 = Math.floor(Math.random() * (122 - 48 + 1)) + 48;
+    var rn5 = Math.floor(Math.random() * (122 - 48 + 1)) + 48;
+    
+        Math.round(rn1, rn2, rn3, rn4, rn5);
+        var GenID = String.fromCharCode(rn1, rn2, rn3, rn4, rn5)
+    }
 })
 
 .controller('NearbyThreadCtrl', function ($scope, NearbyThreadsGetter, AuthTokenFactory, UserFactory) {
+    $scope.votesortime = false;
+    $scope.activeButton = 2;
 
+    $scope.myOrderBy = function (post) {
+
+        if ($scope.votesortime) {
+            return post.vote;
+        } else {
+            var myDate = new Date(post.timestamp);
+            var withOffset = myDate.getTime();
+            return withOffset;
+        };
+    }
+
+    $scope.topSortToggle = function () {
+        $scope.votesortime = true;
+        $scope.activeButton = 1;
+        $scope.apply;
+    }
+    $scope.recentSortToggle = function () {
+        $scope.votesortime = false;
+        $scope.activeButton = 2;
+        $scope.apply;
+    }
     $scope.nearbyRefresh = function () {
         navigator.geolocation.getCurrentPosition(function (position) {
             console.log("latitude from geolocation: ", position.coords.latitude)
@@ -51,7 +138,7 @@ angular.module('starter.controllers', [])
                         post.post.timestamp = Date.now();
                         $scope.posts.splice(0, 0, post.post);
                     });
-
+                    $scope.nearbyRefresh();
                     $scope.post.content = null;
                 })
             }, function (error) {
@@ -71,8 +158,11 @@ angular.module('starter.controllers', [])
             console.log("Downvoting");
             NearbyThreadsGetter.downvote(postid);
         }
+        setTimeout(function () {
+            $scope.nearbyRefresh();
+        }, 10);
 
-    }
+    };
 })
 
 .controller('AccountCtrl', function ($scope, UserFactory) {
@@ -82,11 +172,13 @@ angular.module('starter.controllers', [])
     $scope.showLoginForm = false;
     $scope.showFBLogin = false;
     $scope.showInfo = false;
-
     // initialization
     UserFactory.getUser().then(function success(response) {
-        $scope.user = response.data;
+        console.dir(response.data.user);
+        $scope.user = response.data.user;
+        $scope.hideAllSignins = true;
     });
+
 
     $scope.toggleSignupForm = function () {
         $scope.showSignupForm = !($scope.showSignupForm);
@@ -122,6 +214,7 @@ angular.module('starter.controllers', [])
             $scope.signup.pwd = null;
             console.log(response);
             $scope.login(em, pwd);
+
         }, function handleError(response) {
             alert('Error: ' + response.data);
         });

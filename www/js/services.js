@@ -87,6 +87,85 @@ angular.module('starter.services', [], function config($httpProvider) {
         }
     })
 
+.factory('UserThreadsGetter', function UserThreadsGetter($http, API_URL) {
+    var factory = {
+        getUserThreads: getUserThreads,
+        joinThread: joinThread,
+        postToThread: postToThread,
+        getPosts: getPosts
+    };
+
+    function getUserThreads(user, next) {
+        console.log("Getting User Threads on the front end for user: " + user);
+
+
+        $http.post(API_URL + '/getUserThreads', {
+            data: user
+        }).then(function success(response) {
+            console.log("User Thread retrieval successful.");
+            if (response.data == "nothing") {
+                var testData = [{
+                    name: "AP Calculus BC",
+                    id: "1"
+            }, {
+                    name: "AP Physics C",
+                    id: "2"
+            }, {
+                    name: "Best Marvel Movies",
+                    id: "3"
+                }];
+                console.log("Got no threads from server, returning test data.");
+                next(testData);
+            } else {
+                next(response.data);
+            }
+
+        });
+    }
+
+    var testPosts = [];
+
+    function getPosts(threadId, next) {
+        console.log("Getting posts in the thread with id: " + threadId);
+        testPosts = [{
+            author: "Anirudh",
+            content: "Hi guys"
+        }, {
+            author: "Spencer",
+            content: "What's up?"
+        }];
+
+        $http.post(API_URL + '/getPostsInUThread', {
+            data: threadId
+        }).then(function success(response) {
+            console.log("Posts in User Thread retrieval successful.")
+            if (response.data != "nothing") {
+                next(response.data);
+            } else {
+                next(testPosts);
+            }
+        });
+    }
+
+    function joinThread(threadId, user) {
+        console.log(user + " is joining thread with id: " + threadId + " on the front end.");
+    }
+
+    function postToThread(threadId, post, user) {
+        console.log("Front end is attempting to post into this user thread: " + threadId);
+        post.author = user;
+        post.threadId = threadId;
+        post.title = title;
+        return $http.post(API_URL + '/postToUThread', {
+            data: post
+        }).then(function success(response) {
+            console.log("Posting was successful.");
+        });
+    }
+
+    return factory;
+})
+
 .factory('NearbyThreadsGetter', function NearbyThradsGetter($http, API_URL) {
     var factory = {
         nearbyRefresh: nearbyRefresh,
@@ -105,13 +184,19 @@ angular.module('starter.services', [], function config($httpProvider) {
     }
 
     function upvote(id) {
-        return $http.post(API_URL + '/upvote', {headers: 'application/json', data: id}).then(function success(response) {
+        return $http.post(API_URL + '/upvote', {
+            headers: 'application/json',
+            data: id
+        }).then(function success(response) {
             console.log("Upvote Successful")
         });
     }
 
     function downvote(id) {
-        return $http.post(API_URL + '/downvote', {headers: 'application/json', data: id}).then(function success(response) {
+        return $http.post(API_URL + '/downvote', {
+            headers: 'application/json',
+            data: id
+        }).then(function success(response) {
             console.log("Downvote Successful")
         });
     }
