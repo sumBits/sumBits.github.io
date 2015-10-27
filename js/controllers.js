@@ -1,5 +1,5 @@
 webctrl = angular.module('app.controllers', []);
 
-webtrl.controller('homeCtrl', function ($scope) {
+webctrl.controller('homeCtrl', function ($scope) {
 
 });
