@@ -10,7 +10,7 @@ body {
     height: 100%;
     width: 100%;
     color: #ecf0f1;
-    background-image: url(background.jpg);
+    background-image: url(background-min.jpg);
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
