@@ -1,4 +1,4 @@
-var website = angular.module('app', ['app.controllers', 'ui.router', 'duScroll']);
+var website = angular.module('app', ['app.controllers', 'ui.router', 'duScroll', 'ngAnimate']);
 
 
 website.run(function ($state, $rootScope, $stateParams) {
