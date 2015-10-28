@@ -109,7 +109,7 @@ h1 {
 }
 
 .devabout {
-  margin: auto;
+  text-align: center;
 }
 
 .devaboutname {
@@ -122,7 +122,7 @@ h1 {
     height: 50%;
     width: 100%;
     vertical-align: top;
-    background-color: red;
+    background-color: rgba(204, 204, 204, 0.5);
 }
 
 #sumbitshead {
@@ -166,6 +166,10 @@ a {
     -o-transition : all .4s ease;
     transition : all .4s ease;
     background-color: rgba(200, 54, 54, 0.5);
+}
+
+.abouthead {
+  text-align: center;
 }
 
 
