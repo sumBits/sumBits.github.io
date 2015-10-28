@@ -14,6 +14,11 @@ body {
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 p {
@@ -44,10 +49,10 @@ h1 {
     h1: 65px;
     p: 16px;
     text-align: center;
-    padding: 10px;
     color: black;
     height: 50%;
     width: 100%;
+    padding: 10px;
     vertical-align: top;
     background-color: rgba(255, 255, 255, 1.0);
 }
@@ -59,22 +64,23 @@ h1 {
 }
 
 .thingy {
-    font-size: 18px;
-    color: white;
     background-color: rgba(250, 250, 250, 0);
     border: 3px solid white;
     float: left;
     width: 200px;
     height: 200px;
-    padding: 6px;
-    margin: 10px;
+    padding: 0px;
+    margin: 22px;
     border-radius: 25px;
-    vertical-align: middle;
     text-align: center;
     -webkit-transition : all .8s ease;
     -moz-transition : all .8s ease;
     -o-transition : all .8s ease;
     transition : all .8s ease;
+    p {
+      size: 18px;
+      color: white;
+    }
 }
 
 .thingy:hover {
@@ -88,6 +94,9 @@ h1 {
 
 .devimg {
   border-radius: 40px;
+  padding-top: 8px;
+  height: 160px;
+  width: 160px;
 }
 
 .fifth {
