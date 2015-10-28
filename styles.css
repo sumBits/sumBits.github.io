@@ -160,6 +160,7 @@ a {
     background-color: rgba(200, 54, 54, 0.5);
 }
 
+
 @media (max-width: 640px) {
     .links {
         text-align: center;
