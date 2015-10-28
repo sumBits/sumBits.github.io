@@ -58,11 +58,11 @@ h1 {
     height: 240px;
 }
 
-.thingy {
+.devpicborder {
     font-size: 18px;
     color: white;
-    background-color: rgba(250, 250, 250, 0);
-    border: 3px solid white;
+    /*background-color: rgba(250, 250, 250, 0);*/
+    /*border: 3px solid white;*/
     float: left;
     width: 200px;
     height: 200px;
@@ -77,9 +77,9 @@ h1 {
     transition : all .8s ease;
 }
 
-.thingy:hover {
-    border: 3px solid red;
-    background-color: rgba(102, 48, 150, 0.5);
+.devpicborder:hover {
+    border: rgba(200, 54, 54, 0.7);;
+    background-color: rgba(200, 54, 54, 0.5);;
     -webkit-transition : all .6s ease;
     -moz-transition : all .6s ease;
     -o-transition : all .6s ease;
@@ -87,8 +87,9 @@ h1 {
 }
 
 .devimg {
-  border-radius: 40px;
+  border-radius: 80px;
 }
+
 
 .fifth {
     color: black;
