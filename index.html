@@ -56,7 +56,7 @@
   <!-- Pictures go here-->
 
   <div class="third outer">
-      <div class="devpicborder">
+      <div ng-click="port(0)" class="devpicborder">
         <a href="/sam.html">
           Sam Allen
           <br>
@@ -79,6 +79,10 @@
       </div>
   </div>
 
+  <div ng-show="newOuter" class="new outer">
+    {{product.name}}
+    {{product.description}}
+  </div>
 
   <!-- Work text-->
   <div class="break">
