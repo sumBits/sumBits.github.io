@@ -1,86 +1,97 @@
 <!DOCTYPE html>
-<html ui-view lang="en">
+<html ng-app="app" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>sumBits</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- External Javascript-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="js/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="js/angular-scroll.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+
 </head>
 
-<body>
-    <div class="main outer">
-        <div class="inner">
-            <h1 id="sumbitshead">sumBits</h1>
-            <br>
-            <br>
-            <a href="#about" id="linkabout" class="links">ABOUT</a>
-            <a href="#work" class="links">WORK</a>
-            <a href="mailto:sumbitsio@gmail.com" class="links">CONTACT</a>
-        </div>
+<body ui-view>
+  <div class="main outer">
+      <div class="inner">
+          <h1 id="sumbitshead">sumBits</h1>
+          <br>
+          <br>
+          <a href="#about" id="linkabout" class="links" du-smooth-scroll du-scrollspy duration="2000">ABOUT</a>
+          <a href="#work" class="links">WORK</a>
+          <a href="mailto:sumbitsio@gmail.com" class="links">CONTACT</a>
+      </div>
 
-        <!--Main portion of Website -->
-        <div class="footer outer">
-            <div class="inner">
-                <a href="http://twitter.com/sumbitsio" target='_blank'><i class="fa fa-twitter-square"></i></a> &nbsp;
-                <a href="http://github.com/sumbits" target='_blank'><i class="fa fa-github-square"></i></a>
-            </div>
-        </div>
-    </div>
+      <!--Main portion of Website -->
+      <div class="footer outer">
+          <div class="inner">
+              <a href="http://twitter.com/sumbitsio" target='_blank'><i class="fa fa-twitter-square"></i></a> &nbsp;
+              <a href="http://github.com/sumbits" target='_blank'><i class="fa fa-github-square"></i></a>
+          </div>
+      </div>
+  </div>
 
-    <!-- About text-->
-    <div class="second outer">
-        <a id="about"></a>
-        <div id="second">
-            <h1 name="habout" id="abouthead">About</h1>
-            <br>
-            <!-- Put two or three columns here that open up when scrolled past a certian point. only as big as needed -->
-            <p name="pabout">
-                We are a small group of motivated
-            </p>
-        </div>
+  <!-- About text-->
+  <div class="break">
+      <a id="about"></a>
+      <div>
+          <h1>About</h1>
+          <br>
+          <!-- Put two or three columns here that open up when scrolled past a certian point. only as big as needed -->
+          <p>
+              We are a small group of young motivated developers working on many current projects.
 
-    </div>
+          </p>
+      </div>
 
-    <!-- This is for concept only it may not go into final design!!! -->
-    <!-- Pictures go here-->
+  </div>
 
-    <div class="third outer">
-        <div class="thingy">
-            Sam Allen
-            <br>
-            <br>
-            <img src="me.jpg" id='samimg' height="150" width="150">
-        </div>
-    </div>
+  <!-- This is for concept only it may not go into final design!!! -->
+  <!-- Pictures go here-->
 
-
-    <!-- Work text-->
-    <div class="fourth outer">
-        <a id="work"></a>
-        <div id="fourth" class="fourth inner">
-            <h1 id="abouthead">Work</h1>
-            <p>
-                What is "work"?
-            </p>
-        </div>
-    </div>
-
-    <!-- Examples of work-->
-    <div class="fifth outer">
-        <div id="fifth">
-            <h1 id="abouthead">Example of our works go here</h1>
-        </div>
-    </div>
+  <div class="third outer">
+      <div class="thingy">
+          Sam Allen
+          <br>
+          <br>
+          <img src="me.jpg" id='samimg' height="150" width="150">
+      </div>
+      <div class="thingy">
+        Mathew Price
+        <br>
+        <br>
+      </div>
+      <div class="thingy">
+        Henry Kaufman
+        <br>
+        <br>
+      </div>
+  </div>
 
 
+  <!-- Work text-->
+  <div class="break">
+      <a id="work"></a>
+      <div class="break">
+          <h1>Work</h1>
+          <p>
+              What is "work"?
+          </p>
+      </div>
+  </div>
+
+  <!-- Examples of work-->
+  <div class="fifth outer">
+      <div id="fifth">
+          <h1 id="abouthead">Example of our works go here</h1>
+      </div>
+  </div>
 </body>
 
 </html>

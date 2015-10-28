@@ -40,17 +40,16 @@ h1 {
     vertical-align: middle;
 }
 
-.second {
+.break {
+    h1: 65px;
+    p: 16px;
+    text-align: center;
+    padding: 10px;
     color: black;
     height: 50%;
     width: 100%;
     vertical-align: top;
     background-color: rgba(255, 255, 255, 1.0);
-}
-
-#second {
-    text-align: center;
-    vertical-align: middle;
 }
 
 .third {
@@ -90,18 +89,6 @@ h1 {
 #samimg {
   border-radius: 40px;
 }
-.fourth {
-    color: black;
-    height: 50%;
-    width: 100%;
-    vertical-align: top;
-    background-color: rgba(255, 255, 255, 1.0);
-}
-
-#fourth {
-    text-align: center;
-    vertical-align: middle;
-}
 
 .fifth {
     color: black;
@@ -111,16 +98,7 @@ h1 {
     background-color: red;
 }
 
-#fifth {
-    text-align: center;
-    vertical-align: middle;
-}
-
 #sumbitshead {
-    font-size: 50px;
-}
-
-#abouthead {
     font-size: 50px;
 }
 
@@ -176,16 +154,4 @@ a {
     .footer {
         font-size: 30px;
     }
-}
-
-#img1 {
-    float: left;
-    height: 35%;
-    width: 35%;
-}
-
-#img2 {
-    float: right;
-    height: 200px;
-    width: 40.65%;
 }
