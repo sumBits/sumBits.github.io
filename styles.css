@@ -109,11 +109,12 @@ h1 {
 }
 
 .devabout {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .devaboutname {
-  font-size: 16pt;
+  font-size: 200pt;
 }
 
 
