@@ -181,6 +181,10 @@ a {
   padding-top: 20px;
 }
 
+a.aboutlink {
+  color: rgba(200, 54, 54, 0.5);
+}
+
 .center {
   text-align: center;
 }
