@@ -41,15 +41,14 @@
 
   <!-- About text-->
   <div class="break">
-      <a id="about"></a>
+    <a id="about"></a>
       <div class="about">
           <h1>About</h1>
           <br>
           <!-- Put two or three columns here that open up when scrolled past a certian point. only as big as needed -->
           <p>
-              We are a small group of young motivated developers that want to change the world. Right now there are three of us, but we
+              We are a small group of young motivated developers that want to change the world. Right now there are four of us, but we
               are hoping to grow! If you also share our dream, feel free to <a href="mailto:sumbitsio@gmail.com" class="aboutlink">contact</a> us!
-
           </p>
       </div>
 
@@ -59,23 +58,32 @@
   <!-- Pictures go here-->
 
   <div class="third outer">
+    <div class="center">
       <div ng-click="port(0)" class="devpicborder">
-          Sam Allen
-          <br>
-          <br>
-          <img src="img/sam.jpg" class='devimg'>
+          <div class="name">
+            <p class="bold">Sam</p><p class="lastname"> Allen</p>
+          </div>
+      <img src="img/sam.jpg" class='devimg'>
+    </div>
+      <div class="devpicborder">
+        <div class="name">
+          <p class="bold">Jordan</p><p class="lastname"> Jones</p>
+        </div>
+        <img src="img/jordan.jpg" class='devimg'>
       </div>
       <div class="devpicborder">
-          Jordan Jones
-          <br>
-          <br>
-          <img src="img/jordan.jpg" class='devimg'>
+        <div class="name">
+          <p class="bold">Henry</p><p class="lastname"> Kaufman</p>
+        </div>
+      <img src="img/placeholder.jpg" class="devimg">
       </div>
       <div class="devpicborder">
-        Henry Kaufman
-        <br>
-        <br>
+        <div class="name">
+          <p class="bold">Matthew</p><p class="lastname"> Price</p>
+        </div>
+        <img src="img/placeholder.jpg" class="devimg">
       </div>
+    </div>
   </div>
 
   <div ng-show="newOuter" ng-hide="newOuterHide" class="devabout-element animate-show">
@@ -91,7 +99,7 @@
       <div class="break">
           <h1>Work</h1>
           <p>
-              Need a job or an internship? We offer great options for vetran
+              Need a job or an internship? We offer great options for veteran
               web developers, and new ones alike!
           </p>
       </div>

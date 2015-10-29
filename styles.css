@@ -4,8 +4,7 @@
     margin: 0;
 }
 
-html,
-body {
+html, body {
     font-family: 'Lato', sans-serif;
     height: 100%;
     width: 100%;
@@ -58,10 +57,12 @@ h1 {
 }
 
 .third {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgba(204, 204, 204, 0.5);
     width: 100%;
-    height: 240px;
-    color: white;
+    height: 254px;
 }
 
 
@@ -74,21 +75,35 @@ h1 {
 .devpicborder {
     background-color: rgba(250, 250, 250, 0);
     /*border: 3px solid white;*/
-        float: left;
     width: 200px;
     height: 210px;
     padding: 0px;
-    margin: 22px;
+    display:inline-block;
     border-radius: 25px;
+    margin: 22px;
     text-align: center;
     -webkit-transition : all .8s ease;
     -moz-transition : all .8s ease;
     -o-transition : all .8s ease;
     transition : all .8s ease;
-    p {
-      size: 18px;
-      color: white;
-    }
+    width: 200px;
+}
+
+.name {
+  padding-bottom: 10px;
+}
+
+p.lastname {
+  size: 18px;
+  color: white;
+  display: inline;
+}
+
+p.bold {
+  font-weight: bold;
+  size: 18px;
+  color: white;
+  display: inline;
 }
 
 .devpicborder:hover {
@@ -101,10 +116,8 @@ h1 {
 }
 
 .devimg {
-
-  border-radius: 80px;
-  border-radius: 80px;
-  padding-top: 8px;
+  border-radius: 50%;
+  padding-top: 0px;
   height: 150px;
   width: 150px;
 }
@@ -120,7 +133,7 @@ h1 {
 
 .fifth {
     color: white;
-    height: 50%;
+    height: 500px;
     width: 100%;
     vertical-align: top;
     background-color: rgba(204, 204, 204, 0.5);
@@ -188,8 +201,6 @@ a.aboutlink {
 .center {
   text-align: center;
 }
-
-
 
 @media (max-width: 640px) {
     .links {
