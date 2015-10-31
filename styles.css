@@ -57,10 +57,17 @@ h1 {
 
 .break {
   text-align: center;
+  height: 80%;
   color: black;
-  height: 70%;
   width: 100%;
-  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 1.0);
+}
+
+.work {
+  text-align: center;
+  height: 60%;
+  color: black;
+  width: 100%;
   background-color: rgba(255, 255, 255, 1.0);
 }
 
@@ -68,7 +75,8 @@ h1 {
   background-color: rgba(204, 204, 204, 0.4);
   width: 100%;
   min-height: 10%;
-  margin-top: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 /*.devpicborder {
@@ -199,6 +207,8 @@ a {
   margin-right: auto;
   width: 70%;
   height: 100%;
+  min-height: 100%;
+  background-color: white;
 }
 
 a.aboutlink {
@@ -214,10 +224,12 @@ a.aboutlink {
 }
 
 .box {
-  display: inline;
+  display: inline-block;
   width: 300px;
   height: 300px;
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
 }
 
@@ -238,6 +250,12 @@ p.headline {
   padding-top: 10px;
   text-transform: lowercase;
   padding-bottom: 10px;
+}
+
+@media all and (max-width: 500px){
+    .right, .middle, .left { float:none; width:100%; margin-top: 10px;}
+    .break { height:260%; }
+    .work { height:100% }
 }
 
 @media (max-width: 640px) {
