@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <title>sumBits</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="img/favicon.ico" rel="icon" sizes="16x16" type="image/gif">
     <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="animations.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- External Javascript-->
@@ -22,7 +24,7 @@
 <body ui-view>
   <div class="main outer">
       <div class="inner">
-          <h1 id="sumbitshead">sumBits</h1>
+          <h1 class="sumbitshead">sumBits</h1>
           <br>
           <br>
           <a href="#about" id="linkabout" class="links" du-smooth-scroll du-scrollspy duration="2000">ABOUT</a>
@@ -43,15 +45,24 @@
   <div class="break">
     <a id="about"></a>
       <div class="about">
-          <h1>About</h1>
-          <br>
-          <!-- Put two or three columns here that open up when scrolled past a certian point. only as big as needed -->
-          <p>
-              We are a small group of young motivated developers that want to change the world. Right now there are four of us, but we
-              are hoping to grow! If you also share our dream, feel free to <a href="mailto:sumbitsio@gmail.com" class="aboutlink">contact</a> us!
-          </p>
+          <h1>We're here for you.</h1>
+          <p>We're a small group of young motivated developers and designers that want to change the world. Right now there are only five of us, but we are hoping to grow! If you also share our dream, feel free to <a href="mailto:sumbitsio@gmail.com" class="aboutlink">contact</a> us!</p>
+          <div class="box left">
+            <p class="headline">Fast</p>
+            <hr>
+            <p class="qualities">Fast. We get your project done within your deadline.</p>
+          </div>
+          <div class="box middle">
+            <p class="headline">Simple</p>
+            <hr>
+            <p class="qualities">Our developers and designers transform innovative ideas into beautiful products. </p>
+          </div>
+          <div class="box right">
+            <p class="headline">Effortless</p>
+            <hr>
+            <p class="qualities">Working with us can't be any easier. Quick replies and countless options that fit your needs .</p>
+          </div>
       </div>
-
   </div>
 
   <!-- This is for concept only it may not go into final design!!! -->
@@ -83,15 +94,22 @@
         </div>
         <img src="img/placeholder.jpg" class="devimg">
       </div>
+      <div class="devpicborder">
+        <div class="name">
+          <p class="bold">Daniel</p><p class="lastname"> Zamosh</p>
+        </div>
+        <img src="img/daniel.jpg" class="devimg">
+      </div>
     </div>
   </div>
 
+  <!--
   <div ng-show="newOuter" ng-hide="newOuterHide" class="devabout-element animate-show">
     <div class="devabout">
       {{product.name}}
       {{product.description}}
     </div>
-  </div>
+  </div> -->
 
   <!-- Work text-->
   <div class="break">
@@ -105,12 +123,11 @@
       </div>
   </div>
 
-  <!-- Examples of work-->
+  <!--
   <div class="fifth outer">
       <div class="fifth abouthead">
           <h1>Examples of our work goes here</h1>
       </div>
-  </div>
+  </div> -->
 </body>
-
 </html>
