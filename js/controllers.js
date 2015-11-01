@@ -1,28 +1,27 @@
 webctrl = angular.module('app.controllers', []);
 
 webctrl.controller('homeCtrl', function ($scope) {
-  $scope.port = function (n) {
-    $scope.newOuter = false;
-    $scope.newOuterHide = true;
-    var last_state = []
-    last_state.push(n);
-    switch (n) {
-      case 0:
-        if (last_state[0] === last_state[1]) {
-          $scope.newOuterHide = true;
-          $scope.newOuter = false;
-        } else {
-          $scope.newOuterHide = false;
-          $scope.newOuter = true;
-        }
-        last_state.shift();
-        break;
-    }
-    var info = [{
+    var repeat = false;
+    var devinfo = [{
       name: 'Sam Allen',
-      description: 'heyyyy'
-    }]
+      description: 'hey'
+    }, {
+      name: 'Jordan Jones',
+      description: 'hey again'
+    }];
+    var state = [10];
+    $scope.newOuter = function (n) {
+      state.push(n);
+      if (state[0] === state[1]) {
+        repeat = true;
+      }
+      state.shift()
 
-    $scope.product = info[n]
-  }
+      if (repeat === true) {
+        $scope.hnewOuter = false
+      } else {
+        $scope.hnewOuter = true;
+        $scope.product = devinfo[n];
+      }
+    }
 });

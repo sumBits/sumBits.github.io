@@ -22,13 +22,15 @@ website.run(function ($state, $rootScope, $stateParams) {
         $stateProvider
 
             .state('home', {
-                url: '/', //bascially like www.websitename.com with nothing at the end
+                url: '',
                 templateUrl: 'index.html',
-                controller: 'homeCtrl'
-                //abstract: true
+                controller: 'homeCtrl',
+                views: {
+                    'samDevabout@home': {
+                        templateUrl: 'partials/sam.html',
+                        controller: 'homeCtrl'
+                    }
+                }
+
             });
-            //.state('sam', {
-            //    url: '/sam',
-            //    templateUrl: 'templates/sam.html'
-            //})
     });
