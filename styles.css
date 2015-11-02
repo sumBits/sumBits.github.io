@@ -266,10 +266,10 @@ p.headline {
   padding-bottom: 10px;
 }
 
-@media all and (max-width: 500px){
+@media (max-width: 640px) {
     .right, .middle, .left { float:none; width:100%; margin-top: 10px;}
-    .break { height:260%; }
-    .work { height:100% }
+    .break { height: 260%; }
+    .work { height: 100%; }
 }
 
 @media (max-width: 640px) {
