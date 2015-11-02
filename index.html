@@ -22,7 +22,7 @@
 
 </head>
 
-<body>
+<body ui-view>
   <div class="main outer">
       <div class="inner">
           <h1 class="sumbitshead">sumBits</h1>
@@ -71,11 +71,8 @@
           <div class="name">
             <p class="bold">{{product.namefirst}}</p><p class="lastname"> {{product.namelast}}</p>
           </div>
-      <img src="{{imgproduct.picture}}" class='devimg'>
+      <img src="img/sam.jpg" class='devimg'>
       </div>
-    </div>
-
-    <div ng-show="hnewOuter">
     </div>
   </div>
 
@@ -90,6 +87,7 @@
 Put something like squares that Hover diffrent colors or the same red color on hover
           </p>
   </div>
+</div>
 
 </body>
 </html>
