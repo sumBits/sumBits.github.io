@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <title>sumBits</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="img/favicon.ico" rel="icon" sizes="16x16" type="image/gif">
     <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="animations.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- External Javascript-->
@@ -14,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
     <script src="js/angular-scroll.js"></script>
-    <script src="js/angularSlideables.js"></script>
+    <!-- <script src="js/angularSlideables.js"></script> -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
 
@@ -23,14 +25,13 @@
 <body>
   <div class="main outer">
       <div class="inner">
-          <h1 id="sumbitshead">sumBits</h1>
+          <h1 class="sumbitshead">sumBits</h1>
           <br>
           <br>
           <a href="#about" id="linkabout" class="links" du-smooth-scroll du-scrollspy duration="2000">ABOUT</a>
           <a href="#work" class="links" du-smooth-scroll du-scrollspy duration="2000">WORK</a>
           <a href="mailto:sumbitsio@gmail.com" class="links">CONTACT</a>
       </div>
-
       <!--Main portion of Website -->
       <div class="footer outer">
           <div class="inner">
@@ -42,65 +43,53 @@
 
   <!-- About text-->
   <div class="break">
-      <a id="about"></a>
-      <div>
-          <h1>About</h1>
-          <br>
-          <!-- Put two or three columns here that open up when scrolled past a certian point. only as big as needed -->
-          <p>
-              We are a small group of young motivated developers that want to change the world. Right now there is three of us, but we
-              are hoping to grow! If you too share our dream feel free to <a href="mailto:sumbitsio@gmail.com" class="aboutlink">contact</a> us!
-
-          </p>
+    <a id="about"></a>
+      <div class="about">
+          <h1>We're here for you.</h1>
+          <p>We're a small group of young motivated developers and designers that want to change the world. Right now there are only five of us, but we are hoping to grow! If you also share our dream, feel free to <a href="mailto:sumbitsio@gmail.com" class="aboutlink">contact</a> us!</p>
+          <div class="box left">
+            <p class="headline">Fast</p>
+            <hr>
+            <p class="qualities">Fast. We get your project done within your deadline.</p>
+          </div>
+          <div class="box middle">
+            <p class="headline">Simple</p>
+            <hr>
+            <p class="qualities">Our developers and designers transform innovative ideas into beautiful products. </p>
+          </div>
+          <div class="box right">
+            <p class="headline">Effortless</p>
+            <hr>
+            <p class="qualities">Working with us couldn't be any easier. Quick replies and countless options that fit your needs .</p>
+          </div>
       </div>
-
   </div>
-
-  <!-- This is for concept only it may not go into final design!!! -->
-  <!-- Pictures go here-->
 
   <div class="third outer">
-      <div ng-click="newOuter(0)" class="devpicborder">
-          Sam Allen
-          <br>
-          <br>
-          <img src="img/sam.jpg" class='devimg'>
+    <div class="center">
+      <div ng-repeat="product in products" class="devpicborder">
+          <div class="name">
+            <p class="bold">{{product.namefirst}}</p><p class="lastname"> {{product.namelast}}</p>
+          </div>
+      <img src="{{imgproduct.picture}}" class='devimg'>
       </div>
-      <div class="devpicborder">
-          Jordan Jones
-          <br>
-          <br>
-          <img src="img/jordan.jpg" class='devimg'>
-      </div>
-      <div class="devpicborder">
-        Henry Kaufman
-        <br>
-        <br>
-      </div>
+    </div>
+
+    <div ng-show="hnewOuter">
+    </div>
   </div>
 
-  <div ng-show="hnewOuter">
-    {{product.name}}
-  </div>
 
-  <!-- Work text-->
-  <div class="break">
+  <div class="work">
       <a id="work"></a>
+
       <div class="break">
-          <h1>Work</h1>
+          <h1>Our Work</h1>
+
           <p>
-              Need a job or an internship? We offer great options for vetran
-              web developers, and new ones alike!
+Put something like squares that Hover diffrent colors or the same red color on hover
           </p>
-      </div>
   </div>
 
-  <!-- Examples of work-->
-  <div class="fifth outer">
-      <div class="fifth abouthead">
-          <h1>Examples of our work goes here</h1>
-      </div>
-  </div>
 </body>
-
 </html>

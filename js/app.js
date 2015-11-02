@@ -7,30 +7,21 @@ website.run(function ($state, $rootScope, $stateParams) {
     $rootScope.$stateParams = $stateParams;
 });
 
-    website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-        //enables html5 mode
-        $locationProvider
-            .html5Mode(
-            {
-                enabled: true,
-                requireBase: false
-            })
-            .hashPrefix('!');
+      //enables html5 mode
+      $locationProvider
+        .html5Mode({
+          enabled: true,
+          requireBase: false
+        })
+        .hashPrefix('!');
 
         //states
-        $stateProvider
-
-            .state('home', {
-                url: '',
-                templateUrl: 'index.html',
-                controller: 'homeCtrl',
-                views: {
-                    'samDevabout@home': {
-                        templateUrl: 'partials/sam.html',
-                        controller: 'homeCtrl'
-                    }
-                }
-
-            });
-    });
+      $stateProvider
+        .state('home', {
+          url: '',
+          templateUrl: 'index.html',
+          controller: 'homeCtrl'
+        });
+});

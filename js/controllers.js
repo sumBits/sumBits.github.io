@@ -1,27 +1,33 @@
 webctrl = angular.module('app.controllers', []);
 
 webctrl.controller('homeCtrl', function ($scope) {
-    var repeat = false;
-    var devinfo = [{
-      name: 'Sam Allen',
-      description: 'hey'
-    }, {
-      name: 'Jordan Jones',
-      description: 'hey again'
-    }];
-    var state = [10];
-    $scope.newOuter = function (n) {
-      state.push(n);
-      if (state[0] === state[1]) {
-        repeat = true;
-      }
-      state.shift()
+  $scope.products = info;
+  var info = [{
+    namefirst: 'Sam',
+    namelast: 'Allen',
+    picture: 'img/sam.jpg',
+    description: 'please work'
+  }, {
+    namefirst: 'Jordan',
+    namelast: 'Jones',
+    picture: 'img/jordan.jpg',
+    description: 'hbak; lknbasn;kldsvjfbk;n;'
+  }, {
+    namefirst: 'Henry',
+    namelast: 'Kaufman',
+    picture: 'img/placeholder.jpg',
+    description: 'hey'
+  }, {
+    namefirst: 'Matthew',
+    namelast: 'Price',
+    picture: 'img/placeholder.jpg',
+    description: 'hedav'
+  }, {
+    namefirst: 'Daniel',
+    namelast: 'Zamosh',
+    picture: 'img/daniel.jpg',
+    description: 'heyfvabbasfrdf'
+  }];
 
-      if (repeat === true) {
-        $scope.hnewOuter = false
-      } else {
-        $scope.hnewOuter = true;
-        $scope.product = devinfo[n];
-      }
-    }
+
 });
