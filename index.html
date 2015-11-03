@@ -22,7 +22,7 @@
 
 </head>
 
-<body ui-view>
+<body ng-controller="homeCtrl" ui-view>
   <div class="main outer">
       <div class="inner">
           <h1 class="sumbitshead">sumBits</h1>
@@ -66,37 +66,37 @@
   </div>
 
   <div class="third outer">
-    <div class="center">
-        <div class="devpicborder">
-            <div ng-repeat="products" class="name">
+    <div ng-mouseleave="mouseover_reset()" class="center">
+        <div class="devpicborder" ng-mouseover="mouseover(0)">
+            <div class="name">
               <p class="bold">Sam</p>
               <p class="lastname">Allen</p>
             </div>
             <img src="img/sam.jpg" class='devimg'>
         </div>
-        <div class="devpicborder">
-            <div ng-repeat="products" class="name">
+        <div class="devpicborder" ng-mouseover="mouseover(1)">
+            <div class="name">
               <p class="bold">Jordan</p>
               <p class="lastname">Jones</p>
             </div>
             <img src="img/jordan.jpg" class='devimg'>
         </div>
-        <div class="devpicborder">
-            <div ng-repeat="products" class="name">
+        <div class="devpicborder" ng-mouseover="mouseover(2)">
+            <div class="name">
               <p class="bold">Henry</p>
               <p class="lastname">Kaufman</p>
             </div>
             <img src="img/placeholder.jpg" class='devimg'>
         </div>
-        <div class="devpicborder">
-            <div ng-repeat="products" class="name">
+        <div class="devpicborder" ng-mouseover="mouseover(3)">
+            <div class="name">
               <p class="bold">Matthew</p>
               <p class="lastname">Price</p>
             </div>
             <img src="img/placeholder.jpg" class='devimg'>
         </div>
-        <div class="devpicborder">
-            <div ng-repeat="products" class="name">
+        <div class="devpicborder" ng-mouseover="mouseover(4)">
+            <div class="name">
               <p class="bold">Daniel</p>
               <p class="lastname">Zamosh</p>
             </div>
@@ -105,6 +105,26 @@
     </div>
   </div>
 
+  <div class="devinfo">
+    <div class="initinfo" ng-hide="hideinit">
+      Hover over the faces to see what some of us are doing!
+    </div>
+    <div class="devinfo" ng-show="saminfo">
+      Sammmmm
+    </div>
+    <div class="devinfo" ng-show="jordaninfo">
+      hey
+    </div>
+    <div class="devinfo" ng-show="henryinfo">
+      henry
+    </div>
+    <div class="devinfo" ng-show="mattinfo">
+      hafadskvn
+    </div>
+    <div class="devinfo" ng-show="daninfo">
+      hellloww
+    </div>
+  </div>
 
   <div class="work">
       <a id="work"></a>
