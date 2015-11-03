@@ -20,18 +20,18 @@ webctrl.controller('homeCtrl', function ($scope) {
       case 1:
         $scope.hideinit = true;
         $scope.saminfo = false;
-        $scope.jordaninfo = false;
+        $scope.jordaninfo = true;
         $scope.mattinfo = false;
         $scope.daninfo = false;
-        $scope.henryinfo = true;
+        $scope.henryinfo = false;
         break;
       case 2:
         $scope.hideinit = true;
         $scope.saminfo = false;
-        $scope.henryinfo = false;
+        $scope.henryinfo = true;
         $scope.mattinfo = false;
         $scope.daninfo = false;
-        $scope.jordaninfo = true;
+        $scope.jordaninfo = false;
         break;
       case 3:
         $scope.hideinit = true;
@@ -40,6 +40,7 @@ webctrl.controller('homeCtrl', function ($scope) {
         $scope.jordaninfo = false;
         $scope.daninfo = false;
         $scope.mattinfo = true;
+        break;
       case 4:
         $scope.hideinit = true;
         $scope.saminfo = false;
