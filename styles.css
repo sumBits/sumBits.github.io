@@ -157,6 +157,23 @@ p.bold {
   font-size: 16pt;
 }
 
+.devinfo {
+  background-color: rgba(175, 125, 185, 0.9);
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  vertical-align: top;
+}
+
+.showinfo {
+  background-color: rgba(200, 54, 54, 0.7);
+  height: 250px;
+  width: 250px;
+  border-radius: 30px;
+  border: 10px;
+  border-color: transparent;
+}
+
 
 .fifth {
   color: white;

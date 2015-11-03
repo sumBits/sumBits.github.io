@@ -1,6 +1,7 @@
-webctrl = angular.module('app.controllers', []);
+webctrl = angular.module('app.controllers', ['duScroll']);
 
 webctrl.controller('homeCtrl', function ($scope) {
+
   $scope.hideinit = false;
   $scope.saminfo = false;
   $scope.henryinfo = false;
