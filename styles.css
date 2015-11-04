@@ -158,20 +158,36 @@ p.bold {
 }
 
 .devinfo {
-  background-color: rgba(175, 125, 185, 0.9);
+  background-color: rgba(170, 170, 170, 0.6);
   height: 50%;
   width: 100%;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .showinfo {
-  background-color: rgba(200, 54, 54, 0.7);
+  float: left;
+  background-color: rgba(200, 54, 54, 0.95);
   height: 250px;
-  width: 250px;
+  width: 248px;
   border-radius: 30px;
   border: 10px;
   border-color: transparent;
+}
+.sam {
+  margin-left: 68px;
+}
+.jordan {
+  margin-left: 316px;
+}
+.henry {
+  margin-left: 564px;
+}
+.matt {
+  margin-left: 812px;
+}
+.daniel {
+  margin-left: 1060px;
 }
 
 
