@@ -66,13 +66,14 @@
   </div>
 
   <div class="third outer">
-    <div ng-mouseleave="mouseover_reset(); makeBig=''" class="center">
+    <div ng-mouseleave="mouseover_reset()" class="center">
         <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(0)">
             <div class="name">
               <p class="bold">Sam</p>
               <p class="lastname">Allen</p>
             </div>
             <img src="img/sam.jpg" class='devimg'>
+            <div class="line"> </div>
         </div>
         <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(1)">
             <div class="name">
@@ -80,6 +81,7 @@
               <p class="lastname">Jones</p>
             </div>
             <img src="img/jordan.jpg" class='devimg'>
+            <div class="line"> </div>
         </div>
         <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(2)">
             <div class="name">
@@ -87,6 +89,7 @@
               <p class="lastname">Kaufman</p>
             </div>
             <img src="img/placeholder.jpg" class='devimg'>
+            <div class="line"> </div>
         </div>
         <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(3)">
             <div class="name">
@@ -94,6 +97,7 @@
               <p class="lastname">Price</p>
             </div>
             <img src="img/placeholder.jpg" class='devimg'>
+            <div class="line"> </div>
         </div>
         <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(4)">
             <div class="name">
@@ -101,16 +105,18 @@
               <p class="lastname">Zamosh</p>
             </div>
             <img src="img/daniel.jpg" class='devimg'>
+            <div class="line"> </div>
         </div>
     </div>
   </div>
 
-  <div class="devinfo" ng-class="makeBig">
+  <div class="devinfo" ng-mouseover="makeBig=''; finalDiv()" ng-class="makeBig">
     <div class="initinfo" ng-hide="hideinit">
       Hover over the faces to see what some of us are doing!
     </div>
     <div ng-animate="'fadein'" class="showinfo sam" ng-show="saminfo">
-      Sammmmm
+      <h1> Sam Allen </h1>
+      <p>Sam is one of the lead developers of sumBits, he mostly works with AngularJS and will do frontend design when needed</p>
     </div>
     <div class="showinfo jordan" ng-show="jordaninfo">
       jordan
@@ -123,6 +129,9 @@
     </div>
     <div class="showinfo daniel" ng-show="daninfo">
       daniel
+    </div>
+    <div class="initinfo" ng-show="showFinalDiv">
+      IF you'd like to see more of our developers and staff click here!
     </div>
   </div>
 
