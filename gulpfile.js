@@ -3,12 +3,17 @@ var del = require('del');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
-// var pngquant  = require('imagemin-pngquant');
+var pngquant  = require('imagemin-pngquant');
 var htmlmin = require('gulp-htmlmin');
-// var complexity = require('gulp-complexity');
+var complexity = require('gulp-complexity');
 
-gulp.task('analysis', function(){
-    return gulp.src('js/*.js')
+gulp.task('appanalysis', function(){
+    return gulp.src('js/app.js')
+        .pipe(complexity());
+});
+
+gulp.task('controlleranalysis', function(){
+    return gulp.src('js/controllers.js')
         .pipe(complexity());
 });
  
@@ -23,7 +28,7 @@ gulp.task('minimg', function() {
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
+            use: [pngquant({speed: 1})]
         }))
         .pipe(gulp.dest('dist/img'));
 });
@@ -54,4 +59,4 @@ gulp.task('clean:.idea', function () {
   ]);
 });
 
-gulp.task('default', ['compress', 'minify-css', 'minify', 'minfontawesome']);
+gulp.task('default', ['compress', 'minify-css', 'minify', 'minfontawesome', 'minimg']);
