@@ -1,7 +1,12 @@
 webctrl = angular.module('app.controllers', ['duScroll']);
 
 webctrl.controller('homeCtrl', function ($scope) {
+  //increase when adding animations
+  //its in milliseconds
+  //note if remove delay_ammount code breaks
+  var delay_ammount = 2;
 
+  //defualt values
   $scope.hideinit = false;
   $scope.saminfo = false;
   $scope.henryinfo = false;
@@ -9,6 +14,9 @@ webctrl.controller('homeCtrl', function ($scope) {
   $scope.mattinfo = false;
   $scope.daninfo = false;
   $scope.showFinalDiv = false;
+
+  //mouseover on faces
+  //casses are which faces
   $scope.mouseover = function (n) {
     switch (n) {
       case 0:
@@ -22,7 +30,7 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.daninfo = false;
             $scope.saminfo = true;
           });
-        }, 2);
+        }, delay_ammount);
         break;
       case 1:
         $scope.hideinit = true;
@@ -35,7 +43,7 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.daninfo = false;
             $scope.henryinfo = false;
           });
-        }, 2);
+        }, delay_ammount);
         break;
       case 2:
         $scope.hideinit = true;
@@ -48,7 +56,7 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.daninfo = false;
             $scope.jordaninfo = false;
           });
-        }, 2);
+        }, delay_ammount);
         break;
       case 3:
         $scope.hideinit = true;
@@ -57,11 +65,11 @@ webctrl.controller('homeCtrl', function ($scope) {
           $scope.$apply(function () {
             $scope.saminfo = false;
             $scope.henryinfo = false;
-            $scope.jordaninfo = false;
+            $scope.jordaninfo = false;delay_ammount
             $scope.daninfo = false;
             $scope.mattinfo = true;
           });
-        }, 2);
+        }, delay_ammount);
         break;
       case 4:
         $scope.hideinit = true;
@@ -74,10 +82,12 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.mattinfo = false;
             $scope.daninfo = true;
           });
-        }, 2);
+        }, delay_ammount);
         break;
     }
   }
+
+  //when mouseoverleaves face containing div
   $scope.mouseover_reset = function () {
     $scope.saminfo = false;
     $scope.henryinfo = false;
@@ -85,13 +95,13 @@ webctrl.controller('homeCtrl', function ($scope) {
     $scope.mattinfo = false;
     $scope.daninfo = false;
   }
-
+//when mouseover is on div that contains info
   $scope.finalDiv = function () {
     setTimeout(function () {
       $scope.$apply(function () {
         $scope.showFinalDiv = true;
       });
-    }, 2);
+    }, delay_ammount);
   }
 
 });
