@@ -66,36 +66,36 @@
   </div>
 
   <div class="third outer">
-    <div ng-mouseleave="mouseover_reset()" class="center">
-        <div class="devpicborder" ng-mouseover="mouseover(0)">
+    <div ng-mouseleave="mouseover_reset(); makeBig=''" class="center">
+        <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(0)">
             <div class="name">
               <p class="bold">Sam</p>
               <p class="lastname">Allen</p>
             </div>
             <img src="img/sam.jpg" class='devimg'>
         </div>
-        <div class="devpicborder" ng-mouseover="mouseover(1)">
+        <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(1)">
             <div class="name">
               <p class="bold">Jordan</p>
               <p class="lastname">Jones</p>
             </div>
             <img src="img/jordan.jpg" class='devimg'>
         </div>
-        <div class="devpicborder" ng-mouseover="mouseover(2)">
+        <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(2)">
             <div class="name">
               <p class="bold">Henry</p>
               <p class="lastname">Kaufman</p>
             </div>
             <img src="img/placeholder.jpg" class='devimg'>
         </div>
-        <div class="devpicborder" ng-mouseover="mouseover(3)">
+        <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(3)">
             <div class="name">
               <p class="bold">Matthew</p>
               <p class="lastname">Price</p>
             </div>
             <img src="img/placeholder.jpg" class='devimg'>
         </div>
-        <div class="devpicborder" ng-mouseover="mouseover(4)">
+        <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(4)">
             <div class="name">
               <p class="bold">Daniel</p>
               <p class="lastname">Zamosh</p>
@@ -105,23 +105,23 @@
     </div>
   </div>
 
-  <div class="devinfo">
-    <div class="devinfo initinfo" ng-hide="hideinit">
+  <div class="devinfo" ng-class="makeBig">
+    <div class="initinfo" ng-hide="hideinit">
       Hover over the faces to see what some of us are doing!
     </div>
-    <div class="devinfo showinfo sam" ng-show="saminfo">
+    <div ng-animate="'fadein'" class="showinfo sam" ng-show="saminfo">
       Sammmmm
     </div>
-    <div class="devinfo showinfo jordan" ng-show="jordaninfo">
+    <div class="showinfo jordan" ng-show="jordaninfo">
       jordan
     </div>
-    <div class="devinfo showinfo henry" ng-show="henryinfo">
+    <div class="showinfo henry" ng-show="henryinfo">
       henry
     </div>
-    <div class="devinfo showinfo matt" ng-show="mattinfo">
+    <div class="showinfo matt" ng-show="mattinfo">
       matt
     </div>
-    <div class="devinfo showinfo daniel" ng-show="daninfo">
+    <div class="showinfo daniel" ng-show="daninfo">
       daniel
     </div>
   </div>

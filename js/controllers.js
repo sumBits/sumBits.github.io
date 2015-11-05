@@ -1,6 +1,7 @@
 webctrl = angular.module('app.controllers', ['duScroll']);
 
 webctrl.controller('homeCtrl', function ($scope) {
+  $scope.devinfo = 'devinfo'
 
   $scope.hideinit = false;
   $scope.saminfo = false;
@@ -59,5 +60,9 @@ webctrl.controller('homeCtrl', function ($scope) {
     $scope.jordaninfo = false;
     $scope.mattinfo = false;
     $scope.daninfo = false;
+  }
+
+  if ($scope.hideinit == true) {
+    $scope.devinfo = 'devinfoactive'
   }
 });
