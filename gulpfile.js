@@ -59,4 +59,4 @@ gulp.task('clean:.idea', function () {
   ]);
 });
 
-gulp.task('default', ['compress', 'minify-css', 'minify', 'minfontawesome', 'minimg']);
+gulp.task('default', ['compress', 'minify-css', 'minify']);
