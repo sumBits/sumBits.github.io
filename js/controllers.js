@@ -14,6 +14,7 @@ webctrl.controller('homeCtrl', function ($scope) {
   $scope.mattinfo = false;
   $scope.daninfo = false;
   $scope.showFinalDiv = false;
+  $scope.textAnimate = '';
 
   //mouseover on faces
   //casses are which faces
@@ -22,6 +23,7 @@ webctrl.controller('homeCtrl', function ($scope) {
       case 0:
         $scope.hideinit = true;
         $scope.showFinalDiv = false;
+        $scope.textAnimate = '';
         setTimeout(function () {
           $scope.$apply(function () {
             $scope.henryinfo = false;
@@ -29,12 +31,18 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.mattinfo = false;
             $scope.daninfo = false;
             $scope.saminfo = true;
+            setTimeout(function () {
+              $scope.$apply(function () {
+                $scope.textAnimate = 'fadein';
+              });
+            }, 50);
           });
         }, delay_ammount);
         break;
       case 1:
         $scope.hideinit = true;
         $scope.showFinalDiv = false;
+        $scope.textAnimate = '';
         setTimeout(function () {
           $scope.$apply(function () {
             $scope.saminfo = false;
@@ -42,12 +50,18 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.mattinfo = false;
             $scope.daninfo = false;
             $scope.henryinfo = false;
+            setTimeout(function () {
+              $scope.$apply(function () {
+                $scope.textAnimate = 'fadein';
+              });
+            }, 50);
           });
         }, delay_ammount);
         break;
       case 2:
         $scope.hideinit = true;
         $scope.showFinalDiv = false;
+        $scope.textAnimate = '';
          setTimeout(function () {
           $scope.$apply(function () {
             $scope.saminfo = false;
@@ -55,25 +69,37 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.mattinfo = false;
             $scope.daninfo = false;
             $scope.jordaninfo = false;
+            setTimeout(function () {
+              $scope.$apply(function () {
+                $scope.textAnimate = 'fadein';
+              });
+            }, 50);
           });
         }, delay_ammount);
         break;
       case 3:
         $scope.hideinit = true;
         $scope.showFinalDiv = false;
+        $scope.textAnimate = '';
         setTimeout(function () {
           $scope.$apply(function () {
             $scope.saminfo = false;
             $scope.henryinfo = false;
-            $scope.jordaninfo = false;delay_ammount
+            $scope.jordaninfo = false;
             $scope.daninfo = false;
             $scope.mattinfo = true;
+            setTimeout(function () {
+              $scope.$apply(function () {
+                $scope.textAnimate = 'fadein';
+              });
+            }, 50);
           });
         }, delay_ammount);
         break;
       case 4:
         $scope.hideinit = true;
         $scope.showFinalDiv = false;
+        $scope.textAnimate = '';
         setTimeout(function () {
           $scope.$apply(function () {
             $scope.saminfo = false;
@@ -81,6 +107,11 @@ webctrl.controller('homeCtrl', function ($scope) {
             $scope.jordaninfo = false;
             $scope.mattinfo = false;
             $scope.daninfo = true;
+            setTimeout(function () {
+              $scope.$apply(function () {
+                $scope.textAnimate = 'fadein';
+              });
+            }, 50);
           });
         }, delay_ammount);
         break;

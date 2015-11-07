@@ -12,13 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- External Javascript-->
-    <script src="js/angular.js"></script>
-    <script src="js/angular-ui-router.js"></script>
-    <script src="js/angular-animate.js"></script>
-    <script src="js/angular-scroll.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="js/angular-animate.js"></script>
+    <script type="text/javascript" src="js/angular-scroll.js"></script>
+    <script type="text/javascript" src="js/disable-scroll.js"></script>
     <!-- <script src="js/angularSlideables.js"></script> -->
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
 
 </head>
 
@@ -45,6 +46,9 @@
   <div class="break">
     <a id="about"></a>
       <div class="about">
+          <br>
+          <br>
+          <br>
           <h1>We're here for you.</h1>
           <p>We're a small group of young motivated developers and designers that want to change the world. Right now there are only five of us, but we are hoping to grow! If you also share our dream, feel free to <a href="mailto:sumbitsio@gmail.com" class="aboutlink">contact</a> us!</p>
           <div class="box left">
@@ -65,7 +69,18 @@
       </div>
   </div>
 
-  <div class="third outer">
+  <div class="btncont">
+    <a class="btn" href="#devs" du-smooth-scroll du-scrollspy duration="2000">
+      <div>
+        <img class="dwnarr" src="img/down_arrow.png">
+      </div>
+      <div>
+        <img class="dwnarr" src="img/down_arrow.png">
+      </div>
+    </a>
+  </div>
+
+  <div class="third outer" id="devs">
     <div ng-mouseleave="mouseover_reset()" class="center">
         <div class="devpicborder" ng-mouseover="makeBig='big'; mouseover(0)">
             <div class="name">
@@ -111,28 +126,33 @@
   </div>
 
   <div class="devinfo" ng-mouseover="makeBig=''; finalDiv()" ng-class="makeBig">
-    <div class="initinfo" ng-hide="hideinit">
-      Hover over the faces to see what some of us are doing!
+    <div class="showinfo" ng-show="saminfo" ng-class="textAnimate">
+      <h1 style="color:white"> Sam Allen </h1>
+      <p>Sam is the lead developer of sumBits, he mostly works with AngularJS and will do frontend design when needed. He is currently working many projects </p>
     </div>
-    <div ng-animate="'fadein'" class="showinfo sam" ng-show="saminfo">
-      <h1> Sam Allen </h1>
-      <p>Sam is one of the lead developers of sumBits, he mostly works with AngularJS and will do frontend design when needed</p>
-    </div>
-    <div class="showinfo jordan" ng-show="jordaninfo">
+    <div class="showinfo" ng-show="jordaninfo" ng-class="textAnimate">
       jordan
     </div>
-    <div class="showinfo henry" ng-show="henryinfo">
+    <div class="showinfo" ng-show="henryinfo" ng-class="textAnimate">
       henry
     </div>
-    <div class="showinfo matt" ng-show="mattinfo">
+    <div class="showinfo" ng-show="mattinfo" ng-class="textAnimate">
       matt
     </div>
-    <div class="showinfo daniel" ng-show="daninfo">
+    <div class="showinfo" ng-show="daninfo" ng-class="textAnimate">
       daniel
     </div>
-    <div class="initinfo" ng-show="showFinalDiv">
-      IF you'd like to see more of our developers and staff click here!
+  </div>
+
+  <div class="initinfo" ng-hide="hideinit">
+   <!--  <div ng-hide="hideinit">
+        Hover over the faces to see what some of us are doing!
     </div>
+
+    <div type="button" ng-show="showFinalDiv">
+      If you would like to see more of our developers and staff click here!
+    </div> -->
+
   </div>
 
   <div class="work">
