@@ -217,9 +217,9 @@ p.bold {
 
 .showinfo.fadein {
   color: white;
- 
+
 }
- 
+
 p.showinfo {
   font-style: 16px;
 }
@@ -305,26 +305,14 @@ a.aboutlink {
   display: none;
 }
 
-.box {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
+.row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
 }
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.middle {
-  display: inline-block;
+.column {
+    display: table-cell;
 }
 
 p.headline {
@@ -334,9 +322,10 @@ p.headline {
   padding-bottom: 10px;
 }
 
-@media (max-width: 640px) {
-    .right, .middle, .left { float:none; width:100%; margin-top: 10px;}
-    .break { height: 260%; }
+@media (max-width: 720px) {
+    .row { float:none; display: block; margin-top: 30px;}
+    .column { display:block; margin-top: 40px; }
+    .break { height: 250%; }
     .work { height: 100%; }
 }
 
